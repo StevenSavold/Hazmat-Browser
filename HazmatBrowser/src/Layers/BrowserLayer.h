@@ -4,8 +4,8 @@
 #include <glm/glm.hpp>
 #include <memory>
 
-#include "Browser/Tab.h"
-#include "UI/DomViewPanel.h"
+#include "Components/Tab.h"
+#include "UI/Panels/DomViewPanel.h"
 
 
 

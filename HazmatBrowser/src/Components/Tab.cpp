@@ -43,7 +43,7 @@ namespace hazmat {
     void Tab::ReloadUri()
     {
         // Parse the new Uri from the url bar
-        Uri newUri{ m_UrlText };
+        io::Uri newUri{ m_UrlText };
 
         // error checking??
 
@@ -93,9 +93,9 @@ namespace hazmat {
 
     void Tab::FetchPage()
     {
-        auto it = Uri::ProtocolMap.find(m_Uri.Protocol);
+        auto it = io::Uri::ProtocolMap.find(m_Uri.Protocol);
 
-        if (it == Uri::ProtocolMap.end())
+        if (it == io::Uri::ProtocolMap.end())
         {
             HZ_ASSERT(false, "Unsupported protocol!");
             return;
@@ -103,11 +103,11 @@ namespace hazmat {
 
         switch (it->second)
         {
-        case Uri::Protocols::file:
+        case io::Uri::Protocols::file:
             m_PageContentString = io::FetchFile(m_Uri.Host + ":" + m_Uri.Path);
             break;
-        case Uri::Protocols::http:
-        case Uri::Protocols::https:
+        case io::Uri::Protocols::http:
+        case io::Uri::Protocols::https:
             // TODO
             break;
         default:
