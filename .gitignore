@@ -16,10 +16,6 @@
 *.dylib
 *.dll
 
-# Fortran module files
-*.mod
-*.smod
-
 # Compiled Static libraries
 *.lai
 *.la
@@ -30,3 +26,26 @@
 *.exe
 *.out
 *.app
+
+# Project Structure
+**/bin/
+!vendor/bin/
+bin-int/
+
+# Mac OSX
+.DS_Store
+
+# Hazel files
+*.log
+*.json
+
+# Visual Studio files and folder
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+
+# Linux
+makefile
+Makefile
