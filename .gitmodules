@@ -1,0 +1,6 @@
+[submodule "vendor/lib/hazel"]
+	path = vendor/lib/hazel
+	url = https://github.com/TheCherno/Hazel.git
+[submodule "vendor/lib/gumbo-parser"]
+	path = vendor/lib/gumbo-parser
+	url = https://github.com/google/gumbo-parser.git
