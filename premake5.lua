@@ -129,6 +129,7 @@ project "HazmatRenderEngine"
         "%{prj.name}/src",
         "%{IncludeDir.spdlog}",
         "%{IncludeDir.gumbo}",
+		"%{IncludeDir.glm}"
     }
 
     links
